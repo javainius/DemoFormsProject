@@ -8,7 +8,7 @@ namespace FormsDB.Contexts
 {
     public class MainContext : DbContext
     {
-        public DbSet<PersonDbModel> Persons { get; set; }
+        public DbSet<PersonDbModel> People { get; set; }
         public MainContext()
             : base("data source = (localdb)\\MSSQLLocalDB; Initial Catalog = FormDB; integrated security = SSPI")
         {

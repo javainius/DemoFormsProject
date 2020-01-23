@@ -5,22 +5,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FormsDB.Logic
+namespace FormsDB.Repositories
 {
-    public static class ObjectProcessor
+    public static class PeopleRepository
     {
-        public static List<PersonDbModel> GetAllPersons()
+        public static List<PersonDbModel> GetPeople()
         {
             using (var context = new MainContext())
             {
-                return context.Persons.ToList();
+                return context.People.ToList();
             }
         }
-        public static void AddPersonsInfoToDatabase(PersonDbModel data)
+        public static void CreatePerson(PersonDbModel data)
         {
             using (var context = new MainContext())
             {
-                context.Persons.Add(data);
+                context.People.Add(data);
                 context.SaveChanges();
             }
         }

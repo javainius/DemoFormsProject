@@ -1,4 +1,4 @@
-﻿function sending() {
+﻿function Create() {
     var data = {};
     data.firstname = document.getElementById('first_name').value;
     data.lastname = document.getElementById('last_name').value;
@@ -6,7 +6,7 @@
 
     $.post({
         type: "POST",
-        url: '/Home/SendingData',
+        url: '/Person/CreatePerson',
         data: JSON.stringify(data),
         contentType: "application/json",
         dataType: "json",
@@ -16,11 +16,11 @@
     });
 }
 
-function printing() {
+function GetTable() {
     document.getElementById("demo").innerHTML = '';
     $.ajax({
         type: "GET",
-        url: "Home/GettingData",
+        url: "Person/GetPeople",
         contentType: "application/json;charset=utf-8",
         dataType: "json",
         success: function(data) {
