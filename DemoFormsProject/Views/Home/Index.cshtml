@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" type="text/css" href="~/css/StyleSheet.css">
+
+<div class="content-body">
+    <div class="row">
+        <div class="column left">
+            <h2>Form</h2>
+            <form id="test_form">
+                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="first_name" placeholder="First Name" /><br />
+
+                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="last_name" placeholder="Last Name" /><br />
+
+                <input type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="age" placeholder="Age"><br />
+
+                <input type="button" onclick="sending()" class="btn btn-dark" value="Submit" id="btnClick" />
+            </form>
+            <script src="~/js/AjaxLogic.js"></script>
+        </div>
+        <div class="column right">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">First name</th>
+                        <th scope="col">Last name</th>
+                        <th scope="col">Age</th>
+                    </tr>
+                </thead>
+                <tbody id="demo">
+                </tbody>
+            </table>
+            <input type="button" onclick="printing()" class="btn btn-info" value="Update" id="btnClick" />
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
